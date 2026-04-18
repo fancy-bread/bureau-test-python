@@ -22,6 +22,7 @@ cd src && pytest && ruff check .
 Python 3.11+: Follow standard conventions
 
 ## Recent Changes
+- 002-constitution-compliance: Added Python 3.11+ + pytest (test runner only; implementation has no external dependencies)
 
 - 001-smoke-hello-world: Added Python 3.11+ + pytest (test runner only; implementation has no external dependencies)
 
