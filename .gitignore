@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Specify — ignore runtime state, track config and specs
+.specify/feature.json
+.specify/extensions/.registry
+!.specify/
+!.specify/memory/
+!.specify/templates/
+!.specify/extensions/
+!.specify/workflows/
+!.specify/scripts/
