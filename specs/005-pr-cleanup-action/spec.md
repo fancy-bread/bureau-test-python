@@ -50,8 +50,8 @@ After a spec branch PR is merged, the remote branch ref is deleted automatically
 
 - **FR-001**: `.github/workflows/pr-cleanup.yml` MUST exist after the PR is merged
 - **FR-002**: The workflow MUST run on a `schedule` trigger using a valid cron expression (daily or more frequent)
-- **FR-003**: The workflow MUST mark PRs stale after a period of inactivity (recommended: 7 days)
-- **FR-004**: The workflow MUST close PRs that remain stale for a further period (recommended: 2 days)
+- **FR-003**: The workflow MUST mark PRs stale after a period of inactivity (recommended: 1 day)
+- **FR-004**: The workflow MUST close PRs that remain stale for a further period (recommended: 1 day)
 - **FR-005**: The workflow MUST delete remote branch refs for merged PRs
 - **FR-006**: The `main` branch MUST be exempt from deletion
 - **FR-007**: The workflow MUST declare `contents: write` and `pull-requests: write` permissions

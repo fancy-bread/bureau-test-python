@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/stale@v9
         with:
-          days-before-stale: 7
-          days-before-close: 2
+          days-before-stale: 1
+          days-before-close: 1
           days-before-issue-stale: -1
           days-before-issue-close: -1
           exempt-pr-labels: keep

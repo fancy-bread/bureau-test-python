@@ -24,7 +24,7 @@
 - [x] T002 [US1] Create `.github/workflows/pr-cleanup.yml` with: `name`, `on.schedule` (daily cron), `on.workflow_dispatch`, `permissions.contents: write`, `permissions.pull-requests: write`, and a `stale` job using `actions/stale@v9` with `days-before-stale: 7`, `days-before-close: 2`, `exempt-pr-labels: keep`
 - [x] T003 [US1] Verify YAML parses: `yamllint .github/workflows/pr-cleanup.yml` exits 0
 - [x] T004 [US1] Verify stale action present: `grep -q "actions/stale"` exits 0
-- [x] T005 [US1] Verify configured values: `grep -q "days-before-stale: 7"` and `grep -q "days-before-close: 2"` both exit 0
+- [x] T005 [US1] Verify configured values: `grep -q "days-before-stale: 1"` and `grep -q "days-before-close: 1"` both exit 0
 
 ---
 
