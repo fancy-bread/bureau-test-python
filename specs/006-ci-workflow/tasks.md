@@ -13,9 +13,9 @@
 
 **Goal**: `.github/workflows/ci.yml` exists, triggers on PRs to main, and runs pytest.
 
-- [ ] T001 [US1] Create `.github/workflows/ci.yml` with `on.pull_request.branches: [main]`, checkout, setup-python 3.14, `pip install -e '.[dev]'`, and `pytest` steps
-- [ ] T002 [US1] Verify YAML parses: `python3 -c "import yaml; yaml.safe_load(open('.github/workflows/ci.yml'))"` exits 0
-- [ ] T003 [US1] Verify trigger and pytest present: `grep -q "pull_request"` and `grep -q "pytest"` both exit 0
+- [x] T001 [US1] Create `.github/workflows/ci.yml` with `on.pull_request.branches: [main]`, checkout, setup-python 3.14, `pip install -e '.[dev]'`, and `pytest` steps
+- [x] T002 [US1] Verify YAML parses: `python3 -c "import yaml; yaml.safe_load(open('.github/workflows/ci.yml'))"` exits 0
+- [x] T003 [US1] Verify trigger and pytest present: `grep -q "pull_request"` and `grep -q "pytest"` both exit 0
 
 ---
 
@@ -23,15 +23,15 @@
 
 **Goal**: `ruff check .` step added to the workflow.
 
-- [ ] T004 [US2] Add `ruff check .` step to the `ci` job in `.github/workflows/ci.yml`
-- [ ] T005 [US2] Verify lint step present: `grep -q "ruff check"` exits 0
+- [x] T004 [US2] Add `ruff check .` step to the `ci` job in `.github/workflows/ci.yml`
+- [x] T005 [US2] Verify lint step present: `grep -q "ruff check"` exits 0
 
 ---
 
 ## Phase 3: Scope Audit
 
-- [ ] T006 [P] Verify Python version: `grep -q "3.14"` exits 0
-- [ ] T007 [P] Verify install command: `grep -q "pip install -e"` exits 0
+- [x] T006 [P] Verify Python version: `grep -q "3.14"` exits 0
+- [x] T007 [P] Verify install command: `grep -q "pip install -e"` exits 0
 
 ---
 
