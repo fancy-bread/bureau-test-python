@@ -10,6 +10,9 @@ permissions:
   issues: write
   pull-requests: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   stale:
     runs-on: ubuntu-latest
@@ -22,10 +25,10 @@ jobs:
           days-before-issue-close: -1
           exempt-pr-labels: keep
           stale-pr-message: >
-            This PR has been open without activity for 7 days and is being marked stale.
-            Add the `keep` label to exempt it, or it will be closed in 2 days.
+            This PR has been open without activity for 1 day and is being marked stale.
+            Add the `keep` label to exempt it, or it will be closed tomorrow.
           close-pr-message: >
-            This PR was closed automatically after 2 days of inactivity in stale state.
+            This PR was closed automatically after 1 day of inactivity in stale state.
 
   delete-merged-branches:
     runs-on: ubuntu-latest
