@@ -1,7 +1,7 @@
 [project]
 name = "bureau-test"
 version = "0.1.0"
-requires-python = ">=3.11"
+requires-python = ">=3.14"
 
 [project.optional-dependencies]
 dev = [
@@ -15,7 +15,7 @@ testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py314"
 line-length = 100
 
 [tool.ruff.lint]

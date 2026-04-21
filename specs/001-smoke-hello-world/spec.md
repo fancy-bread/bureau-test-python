@@ -56,6 +56,6 @@ A developer runs `bureau run specs/001-smoke-hello-world/spec.md --repo ./` agai
 ## Assumptions
 
 - The repo has a `.bureau/config.toml` present before bureau is invoked (not bureau's responsibility to create it)
-- Python 3.11+ is the target runtime
+- Python 3.14+ is the target runtime
 - No `src/__init__.py` or packaging setup is required — the module is importable via `PYTHONPATH=.`
 - pytest is available in the environment where bureau runs
