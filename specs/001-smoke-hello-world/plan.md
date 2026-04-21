@@ -9,7 +9,7 @@ Add a pure Python function `greet(name: str) -> str` in `src/greeting.py` with a
 
 ## Technical Context
 
-**Language/Version**: Python 3.11+
+**Language/Version**: Python 3.14+
 **Primary Dependencies**: pytest (test runner only; implementation has no external dependencies)
 **Storage**: N/A
 **Testing**: pytest

@@ -9,7 +9,7 @@ Add `src/temperature.py` with two pure functions — `celsius_to_fahrenheit(cels
 
 ## Technical Context
 
-**Language/Version**: Python 3.11+
+**Language/Version**: Python 3.14+
 **Primary Dependencies**: pytest (test runner only; implementation has no external dependencies)
 **Storage**: N/A
 **Testing**: pytest

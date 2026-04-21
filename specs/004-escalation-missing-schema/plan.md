@@ -11,7 +11,7 @@ The plan artifacts (research, data-model, contracts, tasks) document the expecte
 
 ## Technical Context
 
-**Language/Version**: Python 3.11+ (target implementation language — never reached in a passing run)
+**Language/Version**: Python 3.14+ (target implementation language — never reached in a passing run)
 **Primary Dependencies**: N/A (run does not complete)
 **Storage**: N/A
 **Testing**: stdout capture — presence of `run.escalated`, absence of `run.completed` and PR URL

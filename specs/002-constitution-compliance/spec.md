@@ -86,7 +86,7 @@ The final PR contains no functionality beyond what this spec requires. No input 
 
 ## Assumptions
 
-- Python 3.11+ is the target runtime
+- Python 3.14+ is the target runtime
 - `src/temperature.py` is importable via `PYTHONPATH=.` as `src.temperature`
 - pytest is available in the environment
 - Floating-point arithmetic precision to one decimal place is sufficient for all test assertions
