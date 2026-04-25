@@ -3,7 +3,6 @@
 Auto-generated from all feature plans. Last updated: 2026-04-20
 
 ## Active Technologies
-- YAML (config file only — no Python implementation) + `pre-commit` (environment assumption); `ruff-pre-commit` (remote hook); `pytest` (local hook) (003-precommit-hooks)
 - Python 3.14+ (target implementation language — never reached in a passing run) + N/A (run does not complete) (004-escalation-missing-schema)
 - YAML (GitHub Actions workflow syntax) + `actions/stale` (stale PR management); `gh` CLI or GitHub API (branch deletion) (005-pr-cleanup-action)
 - YAML (GitHub Actions workflow syntax) + `actions/checkout@v4`; `actions/setup-python@v5`; `pip install -e '.[dev]'` (006-ci-workflow)
