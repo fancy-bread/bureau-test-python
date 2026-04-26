@@ -1,4 +1,4 @@
-from src.greeting import greet
+from greeting import greet
 
 
 def test_greet_named_returns_string_containing_name():
