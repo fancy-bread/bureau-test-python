@@ -1,10 +1,16 @@
 [runtime]
-language    = "python"          # e.g. python, typescript, go
-base_image  = "python:3.14-slim"          # e.g. python:3.12-slim, node:20-slim
+language    = "python"
+base_image  = "python:3.14-slim"
 install_cmd = "pip install -e '.[dev]'"
-test_cmd    = "pytest"
-build_cmd   = ""
 lint_cmd    = "ruff check ."
+build_cmd   = ""
+test_cmd    = "pytest"
+
+[ralph_loop]
+max_builder_attempts = 3
+max_rounds           = 3
+command_timeout      = 300
 
 [bureau]
-constitution = ".specify/memory/constitution.md"
+builder_model   = "claude-sonnet-4-6"
+reviewer_model  = "claude-opus-4-7"
