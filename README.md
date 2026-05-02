@@ -12,8 +12,7 @@ Bureau takes a spec file and produces a pull request. This repo provides a contr
 |------|------|--------------|
 | T1 — Smoke | `001-smoke-hello-world` | Does bureau complete a run end-to-end? |
 | T2 — Constitution | `002-constitution-compliance` | Does bureau honor TDD sequence, type annotations, and minimal scope? |
-| T3 — Tooling | `003-precommit-hooks` | Can bureau produce a non-Python config artifact and recognize TDD is inapplicable? |
-| T4 — Escalation | `004-escalation-missing-schema` | Does bureau escalate with a structured blocker instead of guessing? |
+| T3 — Escalation | `004-escalation-missing-schema` | Does bureau escalate with a structured blocker instead of guessing? |
 
 ---
 
@@ -42,12 +41,6 @@ Once bureau is installed, run `bureau init` from this repo root to scaffold `.bu
 ```bash
 cd bureau-test
 bureau init
-```
-
-### Install pre-commit (required for T3)
-
-```bash
-pip install pre-commit
 ```
 
 ---
@@ -82,13 +75,7 @@ bureau resume <run-id>
 **Goal**: Bureau produces `src/temperature.py` with two pure functions across two TDD cycles. US3 verifies minimal scope via `ast.parse` — no imports, no validation, exactly two function definitions.  
 **Pass condition**: `pytest` exits 0; zero constitution violations in PR summary; `ast.parse` scope check passes.
 
-### 003 — Tooling Config: Pre-Commit Hooks
-
-**Branch**: `003-precommit-hooks`  
-**Goal**: Bureau produces `.pre-commit-config.yaml` with pinned `ruff` and `pytest` hooks. No Python source files added or modified. Bureau must recognize this as a config artifact, not code, and skip the TDD cycle.  
-**Pass condition**: `pre-commit run --all-files` exits 0; PR diff contains exactly one file.
-
-### 004 — Escalation: Missing Schema
+### 003 — Escalation: Missing Schema
 
 **Branch**: `004-escalation-missing-schema`  
 **Goal**: Bureau attempts to implement `generate_report()` but cannot determine the output format because `docs/report-schema.md` is missing. Bureau must halt during the planner phase with a structured escalation. **A completed run is a test failure.**  
@@ -113,7 +100,6 @@ Project governance is in [.specify/memory/constitution.md](.specify/memory/const
 specs/
 ├── 001-smoke-hello-world/
 ├── 002-constitution-compliance/
-├── 003-precommit-hooks/
 └── 004-escalation-missing-schema/
     ├── spec.md        ← feature specification (the test case)
     ├── plan.md        ← implementation plan
